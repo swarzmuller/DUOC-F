@@ -1,11 +1,17 @@
 .increase
 	padding: 95px 0 100px
+	+r(1189)
+		padding: 60px 0
 	&-top
 		position: relative
 		padding-left: 200px
 		padding-top: 30px
 		padding-bottom: 95px
 		border-bottom: 4px solid #e25340
+		+r(1189)
+			padding-bottom: 60px
+			padding-left: 170px
+			padding-top: 10px
 		&__title
 			color: #000000
 			font-size: 40px
@@ -15,6 +21,8 @@
 		margin-top: 30px
 		display: flex
 		justify-content: space-between
+		+r(1189)
+			margin-top: 20px
 		&__item
 			padding-left: 48px
 			color: #444444
@@ -22,6 +30,8 @@
 			font-weight: 400
 			line-height: 28px
 			position: relative
+			+r(1189)
+				padding-left: 43px
 			&:before
 				content: ''
 				position: absolute
@@ -37,8 +47,13 @@
 		left: 0
 	&-form
 		margin-top: 33px
+		+r(1189)
+			margin-top: 20px
 		.forma__price-old
 			margin-right: 30px
+			+r(1189)
+				margin-right: 20px
+				margin-bottom: 10px
 		.form__input-field
 			width: 220px
 			height: 70px
@@ -58,10 +73,19 @@
 			margin-left: 20px
 			justify-content: space-between
 			width: 100%
+			+r(1189)
+				margin-left: 0
 		.form .name:before, .form .phone:before
 			top: 22px
+		.forma__wrap
+			align-items: center
+		.forma__price
+			+r(1189)
+				flex-direction: column
 	&-title
 		margin-top: 85px
+		+r(1189)
+			margin-top: 55px
 	&-subtitle
 		color: #444444
 		font-size: 24px
@@ -71,11 +95,16 @@
 		margin-top: 27px
 		b
 			font-weight: 900
+		+r(1189)
+			font-size: 22px
+			margin-top: 20px
 	&-bottom
-		display: flex
+		margin-top: 55px
+		display: flex !important
 		justify-content: space-between
+		+r(1189)
+			margin-top: 35px
 	&-box
-		width: 370px
 		box-shadow: 1px 4px 20px rgba(1, 2, 2, 0.07)
 		background-color: #ffffff
 		border-radius: 5px
@@ -102,7 +131,52 @@
 				display: block
 				font-size: 18px
 				font-weight: 500
-
+		&__title
+			color: #ffffff
+			font-size: 23px
+			font-weight: 700
+			line-height: 1
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 60px
+			position: relative
+			margin-top: -3px
+			+r(1189)
+				font-size: 20px
+		&__text
+			padding: 24px 30px 30px
+			color: #444444
+			font-size: 18px
+			font-weight: 400
+			line-height: 28px
+			b
+				font-weight: 500
+				color: #000000
+			p:not(:last-child)
+				margin-bottom: 24px
+				+r(1189)
+					margin-bottom: 15px
+					br
+						display: none
+			+r(1189)
+				line-height: 24px
+				padding: 17px 20px 20px
+	.slick-slide
+		margin: 0 15px 20px
+		+r(1189)
+			margin-left: 5px
+			margin-right: 5px
+	.slick-list
+		margin: 0 -15px
+		margin-left: -5px
+		margin-left: -5px
+	.slick-slide
+		height: auto
+	.slick-track
+		display: flex
+		+r(1189)
+			width: 1024px !important
 .increase-red
 	background-color: #e2523f
 .increase-green

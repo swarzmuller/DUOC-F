@@ -20,7 +20,7 @@ svg {
 	width: 1190px;
 	margin: 0 auto;
 	padding: 0 10px;
-	@include r(1169) {
+	@include r(1189) {
 		width: 1024px;
 	}
 	@include r(1023) {
