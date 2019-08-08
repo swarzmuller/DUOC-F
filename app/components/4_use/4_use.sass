@@ -1,0 +1,131 @@
+.use
+	padding: 100px 0 153px
+	background: url(../img/use-bg.jpg) no-repeat center;
+	background-size: cover
+	position: relative
+	+r(1169)
+		padding: 60px 0 90px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-35%)
+		background: url(../img/use-girl.png) no-repeat center
+		background-size: contain
+		width: 1087px
+		height: 671px
+		+r(1169)
+			transform: translateX(-29%)
+			background-size: contain
+			width: 877px
+			height: 542px
+		+r(1023)
+			transform: translateX(-20%)
+			width: 550px
+			height: 341px
+		+r(767)
+			display: none
+	&-content
+		margin-top: 120px
+		+r(1169)
+			margin-top: 40px
+		+r(1023)
+			margin-top: 20px
+		+r(767)
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		+r(479)
+			margin-top: 15px
+	&-box
+		display: flex
+		align-items: center
+		+r(767)
+			flex-direction: column
+			width: 240px
+		+r(479)
+			flex-direction: row
+		+r(639)
+			width: 230px
+		+r(479)
+			max-width: 305px
+			width: 100%
+		&:not(:last-child)
+			margin-bottom: 70px
+			+r(1023)
+				margin-bottom: 30px
+			+r(767)
+				margin-bottom: 20px
+			+r(479)
+				margin-bottom: 15px
+		&:nth-child(2n+1)
+			margin-left: 50px
+			+r(1023)
+				margin-left: 0
+		&:nth-child(2)
+			position: relative
+			&:before, &:after
+				content: ''
+				position: absolute
+				left: 130px
+				width: 299px
+				height: 1px
+				background-color: #e0dfde
+				+r(1023)
+					left: 96px
+					width: 220px
+				+r(767)
+					display: none
+			&:before
+				top: -30px
+				+r(1023)
+					top: -15px
+			&:after
+				bottom: -30px
+				+r(1023)
+					bottom: -15px
+		&__icon
+			width: 100px
+			height: 100px
+			border-radius: 50%
+			background: url(../img/use-icon-bg.png) no-repeat center #e2523f
+			display: flex
+			justify-content: center
+			align-items: center
+			+r(1023)
+				width: 80px
+				height: 80px
+			+r(767)
+				width: 70px
+				height: 70px
+				img
+					max-width: 40px
+			+r(479)
+				flex-shrink: 0
+		&__text
+			color: #444444
+			font-family: Roboto
+			font-size: 22px
+			font-weight: 400
+			padding-left: 30px
+			line-height: 28px
+			+r(1023)
+				font-size: 20px
+				line-height: normal
+				padding-left: 15px
+			+r(767)
+				padding-left: 0
+				text-align: center
+				font-size: 19px
+				margin-top: 10px
+			+r(639)
+				font-size: 17px
+			+r(479)
+				text-align: left
+				font-size: 18px
+				padding-left: 10px
+				margin-top: 0
+			span
+				color: #000000
+				font-weight: 500
