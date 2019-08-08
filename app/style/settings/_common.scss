@@ -5,9 +5,11 @@ body {
     font-size: 14px;
     overflow-x: hidden;
 }
-html{
-	overflow-x: hidden;
+
+html {
+    overflow-x: hidden;
 }
+
 img {
     max-width: 100%;
 }
@@ -16,18 +18,23 @@ svg {
     overflow: hidden;
 }
 
+.title-accent {
+    color: #e2523f;
+}
+
 .container {
-<<<<<<< HEAD
-    width: 1170px;
+    font-size: 43px;
+    width: 1190px;
     margin: 0 auto;
     padding: 0 10px;
 
-    @include r(1169) {
+    @include r(1189) {
         width: 1024px;
     }
 
     @include r(1023) {
         width: 768px;
+        padding: 0 10px;
     }
 
     @include r(767) {
@@ -45,8 +52,11 @@ svg {
 
 .title {
     font-size: 54px;
-    font-weight: 900;
     line-height: 1;
+    color: #000000;
+    font-size: 54px;
+    font-weight: 900;
+    text-align: center;
 
     @include r(1219) {
         font-size: 42px;
@@ -70,60 +80,6 @@ svg {
     }
 }
 
-.title-accent {
-    color: #e2523f;
-}
-
-.title-small {
-    font-size: 43px;
-=======
-	width: 1190px;
-	margin: 0 auto;
-	padding: 0 10px;
-	@include r(1189) {
-		width: 1024px;
-	}
-	@include r(1023) {
-		width: 768px;
-		padding: 0 10px;
-	}
-	@include r(767) {
-		width: 640px;
-	}
-	@include r(639) {
-		width: 480px;
-	}
-	@include r(479) {
-		width: 100%;
-	}
-}
-
-.title {	
-	font-size: 54px;
-	line-height: 1;
-	color: #000000;
-	font-size: 54px;
-	font-weight: 900;
-	text-align: center;
-	@include r(1219){
-		font-size: 42px;
-	}
-	@include r(1023){	
-		font-size: 36px;
-		line-height: 1.1;
-	}
-	@include r(767){	
-		font-size: 32px;
-	}
-	@include r(639){	
-		font-size: 29px;
-	}
-	@include r(479){	
-		font-size: 26px;
-	}
->>>>>>> bac07f09872a3483634c2bfa06373e53cabb7f7a
-}
-
 .text-bold {
     font-weight: 700;
 }
@@ -131,21 +87,19 @@ svg {
 .text-black {
     font-weight: 900;
 }
+
 .text-red {
-	color: #e2523f;
+    color: #e2523f;
 }
+
 .text-nowrap {
-<<<<<<< HEAD
     white-space: nowrap;
-}
-=======
-	white-space: nowrap;
 }
 
 .black {
-	color: #000000;
+    color: #000000;
 }
-.red{
-	color: #e2523f;
+
+.red {
+    color: #e2523f;
 }
->>>>>>> bac07f09872a3483634c2bfa06373e53cabb7f7a
