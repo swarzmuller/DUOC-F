@@ -1,0 +1,111 @@
+.increase
+	padding: 95px 0 100px
+	&-top
+		position: relative
+		padding-left: 200px
+		padding-top: 30px
+		padding-bottom: 95px
+		border-bottom: 4px solid #e25340
+		&__title
+			color: #000000
+			font-size: 40px
+			font-weight: 900
+			line-height: 1
+	&-list
+		margin-top: 30px
+		display: flex
+		justify-content: space-between
+		&__item
+			padding-left: 48px
+			color: #444444
+			font-size: 20px
+			font-weight: 400
+			line-height: 28px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: -3px
+				left: 0
+				width: 33px
+				height: 33px
+				border-radius: 50%
+				background: url(../img/use-check.svg) no-repeat center #80bc34
+	&-pack
+		position: absolute
+		top: 0
+		left: 0
+	&-form
+		margin-top: 33px
+		.forma__price-old
+			margin-right: 30px
+		.form__input-field
+			width: 220px
+			height: 70px
+			border-radius: 50px
+		.order__btn
+			width: 225px
+			height: 70px
+			border-radius: 50px
+			color: #ffffff
+			font-size: 30px
+			font-family: "Roboto";
+			font-weight: 900
+			line-height: 20px
+		.form .name, .form .phone
+			margin: 0
+		.form
+			margin-left: 20px
+			justify-content: space-between
+			width: 100%
+		.form .name:before, .form .phone:before
+			top: 22px
+	&-title
+		margin-top: 85px
+	&-subtitle
+		color: #444444
+		font-size: 24px
+		font-weight: 400
+		line-height: 30px
+		text-align: center
+		margin-top: 27px
+		b
+			font-weight: 900
+	&-bottom
+		display: flex
+		justify-content: space-between
+	&-box
+		width: 370px
+		box-shadow: 1px 4px 20px rgba(1, 2, 2, 0.07)
+		background-color: #ffffff
+		border-radius: 5px
+		&__img
+			position: relative
+		&__circle
+			position: absolute
+			bottom: 30px
+			right: 30px
+			width: 90px
+			height: 90px
+			border-radius: 50px
+			display: flex
+			text-align: center
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			color: #ffffff
+			font-size: 27px
+			font-weight: 400
+			line-height: 21px
+			font-weight: 900
+			span
+				display: block
+				font-size: 18px
+				font-weight: 500
+
+.increase-red
+	background-color: #e2523f
+.increase-green
+	background-color: #80bc34
+.increase-blue
+	background-color: #29aeda
