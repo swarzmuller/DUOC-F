@@ -69,7 +69,7 @@ gulp.task('style', function(done){
       	}))
     	.pipe(concat('main.css'))
     	.pipe(autoprefixer({
-    	  browsers: ['last 2 versions'],
+    		overrideBrowserslist:  ['last 2 versions'],
     	  cascade: false 
     	}))
     	.pipe(csso({
