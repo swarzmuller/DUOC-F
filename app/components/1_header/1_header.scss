@@ -3,11 +3,13 @@
   &__wrap{
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__logo{
     width: 133px;
     height: 41px;
     background: url(../img/1-logo.svg) no-repeat;
+    margin: 0 22px 0 0;
   }
   &__menu{
     display: flex;
@@ -43,7 +45,7 @@
     }
     &-block{
       display: flex;
-
+      margin: 20px 0 0;
       .time{
         display: flex;
         flex-direction: column;

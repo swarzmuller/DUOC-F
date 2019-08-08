@@ -15,9 +15,9 @@ svg {
 }
 
 .container {
-	width: 1170px;
+	width: 1190px;
 	margin: 0 auto;
-	padding: 0 25px;
+	padding: 0 10px;
 	@include r(1169) {
 		width: 1024px;
 	}
