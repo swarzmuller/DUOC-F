@@ -1,0 +1,44 @@
+.effect{
+  background: #fff;
+  padding: 97px 0;
+  .title{
+    margin: 0 20px 0;
+  }
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 570px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px rgba(1, 2, 2, 0.08);
+    &-time{
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      padding: 9px 0 0;
+      flex-direction: column;
+      color: #ffffff;
+      width: 75px;
+      height: 75px;
+      background: #e25340;
+      border-radius: 50%;
+    }
+  }
+  &-number{
+    font-size: 29px;
+    font-weight: 900;
+  }
+
+  &-img{
+
+  }
+  &-text{
+    color: #444444;
+    font-size: 20px;
+    width: 100%;
+  }
+}
