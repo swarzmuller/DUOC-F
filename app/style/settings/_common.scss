@@ -23,11 +23,9 @@ svg {
 }
 
 .container {
-    font-size: 43px;
     width: 1190px;
     margin: 0 auto;
     padding: 0 10px;
-
     @include r(1189) {
         width: 1024px;
     }
@@ -54,7 +52,6 @@ svg {
     font-size: 54px;
     line-height: 1;
     color: #000000;
-    font-size: 54px;
     font-weight: 900;
     text-align: center;
 
@@ -102,4 +99,8 @@ svg {
 
 .red {
     color: #e2523f;
+}
+
+.title-small{
+    font-size: 43px;
 }
