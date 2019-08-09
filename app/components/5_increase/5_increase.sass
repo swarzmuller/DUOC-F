@@ -1,0 +1,346 @@
+.increase
+	padding: 95px 0 100px
+	+r(1189)
+		padding: 60px 0
+	&-top
+		position: relative
+		padding-left: 200px
+		padding-top: 30px
+		padding-bottom: 95px
+		border-bottom: 4px solid #e25340
+		+r(1189)
+			padding-bottom: 60px
+			padding-left: 170px
+			padding-top: 10px
+		+r(1023)
+			padding-left: 0
+			padding-bottom: 40px
+			padding-top: 0
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		+r(479)
+			padding-bottom: 25px
+		&__title
+			color: #000000
+			font-size: 40px
+			font-weight: 900
+			line-height: 1
+			+r(1023)
+				text-align: center
+				font-size: 36px
+				width: 100%
+	&-list
+		margin-top: 30px
+		display: flex
+		justify-content: space-between
+		+r(1189)
+			margin-top: 20px
+		+r(1023)
+			width: 100%
+			margin-bottom: 5px
+		+r(767)
+			justify-content: center
+			margin-bottom: 0
+		+r(639)
+			flex-direction: column
+			margin-top: 15px
+			margin-bottom: 15px
+			max-width: 405px
+			margin-right: auto
+			margin-left: auto
+		&__item
+			padding-left: 48px
+			color: #444444
+			font-size: 20px
+			font-weight: 400
+			line-height: 28px
+			position: relative
+			+r(1189)
+				padding-left: 43px
+			+r(1023)
+				width: 32%
+				padding-left: 40px
+				font-size: 17px
+				line-height: normal
+			+r(767)
+				padding-left: 0
+				padding-top: 37px
+				text-align: center
+			+r(639)
+				padding-left: 35px
+				padding-top: 0
+				width: 100%
+				text-align: left
+				font-size: 18px
+				br
+					display: none
+			&:not(:last-child)
+				+r(639)
+					margin-bottom: 15px
+			&:before
+				content: ''
+				position: absolute
+				top: -3px
+				left: 0
+				width: 33px
+				height: 33px
+				border-radius: 50%
+				background: url(../img/use-check.svg) no-repeat center #80bc34
+				+r(1023)
+					top: 0
+				+r(767)
+					left: 50%
+					transform: translateX(-50%)
+				+r(639)
+					left: 0
+					transform: translateX(0) 
+					top: -3px
+					width: 28px
+					height: 28px
+	&-pack
+		position: absolute
+		top: 0
+		left: 0
+		+r(1023)
+			position: inherit
+			width: auto
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-right: 25px
+		+r(479)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+	&-form
+		margin-top: 33px
+		+r(1189)
+			margin-top: 20px
+		+r(1023)
+			width: 280px
+			border-radius: 15px
+			border: 2px solid #e5d9d8
+			padding-top: 15px
+			padding-bottom: 15px
+		+r(639)
+			margin-top: 0
+		.forma__price-old
+			margin-right: 30px
+			+r(1189)
+				margin-right: 20px
+				margin-bottom: 10px
+		.form__input-field
+			width: 220px
+			height: 70px
+			border-radius: 50px
+			+r(1023)
+				height: 60px
+		.order__btn
+			width: 225px
+			height: 70px
+			border-radius: 50px
+			color: #ffffff
+			font-size: 30px
+			font-family: "Roboto";
+			font-weight: 900
+			line-height: 20px
+			+r(1023)
+				height: 60px
+		.form .name, .form .phone
+			margin: 0
+			+r(1023)
+				margin-bottom: 15px
+		.form
+			margin-left: 20px
+			justify-content: space-between
+			width: 100%
+			+r(1189)
+				margin-left: 0
+			+r(1023)
+				flex-direction: column
+		.form .name:before, .form .phone:before
+			top: 22px
+			+r(1023)
+				top: 18px
+		.forma__wrap
+			align-items: center
+		.forma__price
+			+r(1189)
+				flex-direction: column
+			+r(1023)
+				flex-direction: row
+	&-title
+		margin-top: 85px
+		+r(1189)
+			margin-top: 55px
+		+r(1023)
+			margin-top: 35px
+		+r(767)
+			margin-top: 25px
+	&-subtitle
+		color: #444444
+		font-size: 24px
+		font-weight: 400
+		line-height: 30px
+		text-align: center
+		margin-top: 27px
+		b
+			font-weight: 900
+		+r(1189)
+			font-size: 22px
+			margin-top: 20px
+		+r(1023)
+			margin-top: 15px
+			font-size: 20px
+		+r(767)
+			margin-top: 10px
+			font-size: 18px
+	&-bottom
+		margin-top: 55px
+		display: flex !important
+		justify-content: space-between
+		+r(1189)
+			margin-top: 30px
+		+r(1023)
+			margin-top: 20px
+		+r(767)
+			margin-top: 15px
+	&-box
+		box-shadow: 1px 4px 20px rgba(1, 2, 2, 0.07)
+		background-color: #ffffff
+		border-radius: 5px
+		+r(1189)
+			box-shadow: 1px 4px 4px rgba(1, 2, 2, 0.07)
+		&__img
+			position: relative
+			img
+				+r(1023)
+					width: 100%
+		&__circle
+			position: absolute
+			bottom: 30px
+			right: 30px
+			width: 90px
+			height: 90px
+			border-radius: 50px
+			display: flex
+			text-align: center
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			color: #ffffff
+			font-size: 27px
+			font-weight: 400
+			line-height: 21px
+			font-weight: 900
+			+r(639)
+				width: 70px
+				height: 70px
+				font-size: 20px
+				line-height: 16px
+			span
+				display: block
+				font-size: 18px
+				font-weight: 500
+				+r(639)
+					font-size: 16px
+		&__title
+			color: #ffffff
+			font-size: 23px
+			font-weight: 700
+			line-height: 1
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 60px
+			position: relative
+			margin-top: -3px
+			+r(1189)
+				font-size: 20px
+			+r(639)
+				font-size: 18px
+				height: 50px
+		&__text
+			padding: 24px 30px 30px
+			color: #444444
+			font-size: 18px
+			font-weight: 400
+			line-height: 28px
+			b
+				font-weight: 500
+				color: #000000
+			p:not(:last-child)
+				margin-bottom: 24px
+				+r(1189)
+					margin-bottom: 15px
+					br
+						display: none
+				+r(767)
+					margin-bottom: 10px
+			+r(1189)
+				line-height: 24px
+				padding: 17px 20px 20px
+			+r(767)
+				padding: 15px
+	.slick-slide
+		margin: 0 15px 20px
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+		+r(1189)
+			margin-left: 5px
+			margin-right: 5px
+			margin-bottom: 5px
+	.slick-prev, .slick-next
+		width: 40px
+		height: 40px
+		background-color: #800080
+		border-radius: 50%
+		transform: none
+		top: 316px
+		+r(767)
+			top: 197px
+		+r(639)
+			top: 20px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 0
+			background: url(../img/arrow-slide.svg) no-repeat center
+			background-size: contain
+			width: 16px
+			height: 16px
+	.slick-next
+		right: 5px
+		z-index: 20
+		+r(767)
+			right: 10px
+		&:before
+			transform: translate(-50%, -50%) scaleX(-1)
+	.slick-prev
+		left: 5px
+		z-index: 20
+		+r(767)
+			left: 10px
+	.slick-list
+		+r(1023)
+			margin: 0 20px
+		+r(767)
+			margin: 0
+	.slick-slide
+		height: auto
+	.slick-track
+		display: flex
+		+r(639)
+			display: block
+.increase-red
+	background-color: #e2523f
+.increase-green
+	background-color: #80bc34
+.increase-blue
+	background-color: #29aeda

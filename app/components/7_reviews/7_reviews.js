@@ -7,9 +7,29 @@ $('.reviews-slider').slick({
     slidesToScroll: 1,
     responsive: [
         {
-            breakpoint: 480,
+            breakpoint: 1190,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 639,
             settings: {
                 slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 479,
+            settings: {
+                slidesToShow: 1,
+                adaptiveHeight: true
             }
         }
     ]
