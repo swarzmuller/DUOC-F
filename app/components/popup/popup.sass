@@ -1,0 +1,143 @@
+.ever-popup__inner
+	max-width: 770px !important
+
+
+.pop-up__box
+	background-color: #fdefed
+	box-sizing: border-box
+	border-radius: 10px 12px 12px 10px
+	max-width: 770px
+	width: 770px
+	height: 470px
+
+.popup-title
+	text-align: center
+	font-size: 40px
+	h3, h2
+		margin: 0
+
+.pop-up__content
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	height: 100%
+.image-pack img
+	display: inline-block
+.image-pack
+	position: relative
+	z-index: 0
+	margin-top: 64px
+	left: -6px
+.pop-up-pack
+	max-width: 562px
+	max-height: 265px
+	position: relative
+	z-index: 3
+.pop-up__left
+	min-width: 250px
+.pop-up-ingridient
+	position: absolute
+	top: -45px
+	left: 241px
+	z-index: 1
+	height: 220px
+	width: 245px
+.pop-up-leaf
+	position: absolute
+	top: 68px
+	left: 15px
+	z-index: 2
+	width: 78px
+	height: 69px
+.form-box1 > *
+	float: none !important
+	margin: 0 !important
+.pop-up__right
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 290px
+	height: 470px
+	background-color: #e24b3e
+	z-index: 5
+	border-radius: 0 10px 10px 0
+	padding: 27px 25px 0
+	.forma__wrap
+		margin-top: 60px
+		flex-direction: column
+	.header__timer-block
+		margin-top: 0
+	.header__timer
+		flex-direction: column
+	.header__timer-text
+		width: 100%
+		text-align: center
+		margin-bottom: 10px
+	.time-clock
+		display: flex
+		span:last-child
+			margin-left: 3px
+	.header__timer-block .time-clock .inn
+		height: 35px
+		width: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+	.forma__price-old__name
+		color: #ffffff
+		font-size: 13px
+	.forma__price-old__price
+		color: #ffffff
+		opacity: 0.75
+		margin-top: 4px
+	.forma__price-old__price:after, .forma__price-old__price:before
+		background-color: #fff
+		opacity: 0.75
+	.forma__price-new__name
+		color: #ffffff
+		font-size: 14px
+	.forma__price-new__price
+		color: #ffffff
+		font-size: 39px
+		margin-top: 5px
+	.forma__price-old
+		margin-right: 34px
+	.form .name, .form .phone
+		margin: 0 0 11px
+	.form__input-field
+		width: 100%
+	.form
+		flex-direction: column
+		margin-top: 5px
+	.order__btn
+		width: 100%
+	.forma__price
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 50%
+			top: -32px
+			transform: translateX(-60%)
+			width: 58px
+			height: 58px
+			background: url(../img/discount.png) no-repeat center
+
+
+
+
+@media (max-width: 1000px)
+	.pop-up__box
+		width: 290px
+		background: transparent
+	.pop-up__right
+		border-radius: 10px
+	.pop-up__content
+		justify-content: center
+	.image-pack
+		padding-bottom: 20px
+		display: none
+		img
+			max-height: 280px
