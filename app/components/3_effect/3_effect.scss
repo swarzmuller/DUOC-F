@@ -72,11 +72,33 @@
 }
 
 
-@include r(1219) {
-
+@include r(1189) {
+  .effect__item{
+    width: 489px;
+    margin: 0 0 18px;
+  }
+  .effect__item-time{
+    margin: -21px -34px 0 10px;
+  }
+  .effect__item-list {
+    padding: 0 13px;
+  }
+  .effect-text {
+    font-size: 18px;
+  }
 }
 
 @include r(1023) {
+  .effect__wrap {
+    margin: 35px 0 0;
+    justify-content: center;
+  }
+  .effect__item-img{
+    width: 70px;
+  }
+  .effect__item {
+    width: 100%;
+  }
 
 }
 
@@ -89,5 +111,29 @@
 }
 
 @include r(479) {
+  .effect-text {
+    font-size: 16px;
+    padding: 6px 0 4px;
+    line-height: 21px;
+  }
+  .effect__item-img {
+    width: 58px;
+  }
+  .effect__item-time {
+    margin: -21px -34px 0 7px;
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+  }
+  .effect-number {
+    font-size: 22px;
+  }
+  .effect-check {
+    margin-right: 6px;
+    margin-top: 0;
+  }
+  .effect__item-list {
+    padding: 0 7px 0 4px;
+  }
 
 }
