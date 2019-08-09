@@ -1,10 +1,24 @@
 .delivery {
     padding: 90px 0 80px;
-    background: url(../img/delivery-map.png) 50% 63px no-repeat, url(../img/use-bg.jpg) 0 0 no-repeat;
+    background: url(../img/delivery-map.png) 50% 63px no-repeat, url(../img/delivery-bg.jpg) 0 0 no-repeat;
+
+    @include r(767) {
+        background: url(../img/delivery-bg.jpg) 0 0 no-repeat;
+        background-size: cover;
+
+    }
 }
 
 .title_delivery {
     margin-bottom: 60px;
+
+    @include r(1023) {
+        margin-bottom: 40px;
+    }
+
+    @include r(639) {
+        margin-bottom: 20px;
+    }
 }
 
 .delivery__list {
@@ -12,6 +26,16 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 78px;
+
+    @include r(1023) {
+        margin-bottom: 40px;
+    }
+
+    @include r(767) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
 }
 
 .delivery__item {
@@ -19,17 +43,68 @@
     flex-direction: column;
     align-items: center;
     width: 30%;
+
+    &:nth-child(2) {
+        @include r(639) {
+            margin-top: 20px;
+        }
+    }
+
+    &:nth-child(3) {
+        @include r(767) {
+            margin-top: 20px;
+        }
+    }
+
+    @include r(767) {
+        width: 40%;
+    }
+
+    @include r(639) {
+        width: 55%;
+    }
 }
 
 .delivery__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 255px;
     height: 255px;
     margin-bottom: 27px;
     border-radius: 50%;
     background-color: #f4dacc;
+
+    @include r(1023) {
+        width: 230px;
+        height: 230px;
+        margin-bottom: 20px;
+    }
+
+    @include r(639) {
+        margin-bottom: 10px;
+    }
 }
 
-.delivery__pic {}
+.delivery__pic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    @include r(1023) {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+.delivery__img {
+    max-width: 100%;
+}
 
 .delivery__item-title {
     margin-bottom: 10px;
@@ -37,6 +112,18 @@
     font-size: 22px;
     line-height: 28px;
     font-weight: 700;
+
+    @include r(1023) {
+        margin-bottom: 5px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @include r(639) {
+        margin-bottom: 3px;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 .delivery__desc {
@@ -44,11 +131,26 @@
     font-size: 18px;
     line-height: 28px;
     color: #555;
+
+    @include r(1023) {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    @include r(639) {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 .delivery__footnote {
     display: flex;
     align-items: flex-start;
+
+    @include r(1023) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .delivery__options {
@@ -61,17 +163,40 @@
     padding: 15px 0 13px;
     background-color: #fff;
     border-radius: 4px;
+
+    @include r(1023) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    @include r(430) {
+        flex-wrap: wrap;
+        max-width: 300px;
+        padding: 10px;
+    }
 }
 
 .delivery__options-item {
     display: flex;
     align-items: center;
+
+    &:first-child {
+        margin-bottom: 10px;
+    }
+
+    @include r(430) {
+        width: 100%;
+    }
 }
 
 .delivery__options-item-divider {
     width: 1px;
     height: 28px;
     background-color: #d8d6d6;
+
+    @include r(430) {
+        display: none;
+    }
 }
 
 .delivery__options-pic {
@@ -88,6 +213,11 @@
     display: flex;
     align-items: flex-start;
     flex-grow: 1;
+
+    @include r(1023) {
+        width: 100%;
+        max-width: 500px;
+    }
 }
 
 .delivery__payment-title {
@@ -95,6 +225,14 @@
     font-size: 15px;
     line-height: 18px;
     color: #444;
+
+    @include r(1023) {
+        margin: 6px 25px 0 0;
+    }
+
+    @include r(430) {
+        display: none;
+    }
 }
 
 .delivery__payment-list {
