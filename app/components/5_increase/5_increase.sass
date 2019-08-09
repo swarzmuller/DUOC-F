@@ -285,6 +285,10 @@
 				padding: 15px
 	.slick-slide
 		margin: 0 15px 20px
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
 		+r(1189)
 			margin-left: 5px
 			margin-right: 5px
@@ -324,7 +328,8 @@
 		+r(767)
 			left: 10px
 	.slick-list
-		margin: 0 20px
+		+r(1023)
+			margin: 0 20px
 		+r(767)
 			margin: 0
 	.slick-slide
