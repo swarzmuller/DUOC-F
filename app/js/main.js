@@ -1,4 +1,5 @@
-
+//=include /libs/slick.min.js"
+//=include ../components/7_reviews/7_reviews.js
 //=include ../components/footer/footer.js
 
 
@@ -36,6 +37,7 @@ $('.increase-bottom').slick({
 ]
 });
 
+<<<<<<< HEAD
 var element = document.querySelector('.ordeh');
 var element2 = document.querySelector('.ordeh2');
 var Visible = function (target) {
@@ -79,3 +81,5 @@ $(window).scroll(function () {
 });
 
 Visible (element); 
+=======
+>>>>>>> 89ec07702477cd274ce406826c8950639cd332e9
