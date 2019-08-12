@@ -19,6 +19,9 @@
     box-shadow: 0px 0px 20px 0px rgba(1, 2, 2, 0.08);
     padding: 20px 0px;
     margin: 0 0 36px;
+    &:hover{
+      box-shadow: 1px 1px 8px 0 rgba(1,2,2,.07);
+    }
     &-time{
       font-size: 16px;
       font-weight: 500;
@@ -40,6 +43,7 @@
     }
     &-list{
       padding: 0 18px 0;
+      width: 100%;
     }
   }
   &-number{
@@ -90,7 +94,7 @@
 
 @include r(1023) {
   .effect__wrap {
-    margin: 35px 0 0;
+    margin: 18px 0 0;
     justify-content: center;
   }
   .effect__item-img{
@@ -98,6 +102,9 @@
   }
   .effect__item {
     width: 100%;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 
 }
