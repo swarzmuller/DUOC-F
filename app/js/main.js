@@ -48,6 +48,12 @@ haburg.onclick = function () {
 close.onclick = function () {
     menu.classList.remove("active-menu");
 };
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top -29
+    }, 1000);
+});
 
 var element = document.querySelector('.ordeh');
 var element2 = document.querySelector('.ordeh2');
