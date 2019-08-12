@@ -1,0 +1,53 @@
+.orderLine
+	width: 100%
+	background: #e24b3e
+	height: 90px
+	border-bottom: 1px solid #fff
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 30
+	display: block
+	.container
+		height: 100%
+	&-content
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 100%
+	&-pack
+		width: 40px
+	.forma__price
+		padding-right: 65px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			width: 58px
+			height: 58px
+			background: url(../img/discount.png) no-repeat center
+	.forma__price-old__name
+		color: #ffffff
+		font-size: 13px
+	.forma__price-old__price
+		color: #ffffff
+		opacity: 0.75
+		margin-top: 4px
+	.forma__price-old__price:after, .forma__price-old__price:before
+		background-color: #fff
+		opacity: 0.75
+	.forma__price-new__name
+		color: #ffffff
+		font-size: 14px
+	.forma__price-new__price
+		color: #ffffff
+		font-size: 39px
+		margin-top: 5px
+	.forma__price-old
+		margin-right: 14px
+
+.show-line
+	display: none

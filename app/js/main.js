@@ -35,3 +35,35 @@ $('.increase-bottom').slick({
 	}
 ]
 });
+
+var element = document.querySelector('.increase-top');
+var element2 = document.querySelector('.increase-top');
+
+var Visible = function (target) {
+  var targetPosition = {
+      top: window.pageYOffset + target.getBoundingClientRect().top,
+      left: window.pageXOffset + target.getBoundingClientRect().left,
+      right: window.pageXOffset + target.getBoundingClientRect().right,
+      bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+    },
+    windowPosition = {
+      top: window.pageYOffset,
+      left: window.pageXOffset,
+      right: window.pageXOffset + document.documentElement.clientWidth,
+      bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+  if (targetPosition.bottom > windowPosition.top &&
+    targetPosition.top < windowPosition.bottom && 
+    targetPosition.right > windowPosition.left && 
+    targetPosition.left < windowPosition.right) { 
+		$('.orderLine').addClass('show-line');
+  } else {
+		$('.orderLine').removeClass('show-line');
+		
+  };
+};
+window.addEventListener('scroll', function() {
+  Visible (element);
+});
+Visible (element);
+
