@@ -37,3 +37,14 @@ $('.increase-bottom').slick({
 ]
 });
 
+const haburg = document.querySelector('.hamburger');
+const menu = document.querySelector('.header__menu');
+const close = document.querySelector('.close');
+
+haburg.onclick = function () {
+    menu.classList.add("active-menu");
+};
+
+close.onclick = function () {
+    menu.classList.remove("active-menu");
+};
