@@ -37,7 +37,6 @@ $('.increase-bottom').slick({
 ]
 });
 
-<<<<<<< HEAD
 var element = document.querySelector('.ordeh');
 var element2 = document.querySelector('.ordeh2');
 var Visible = function (target) {
@@ -68,7 +67,6 @@ var Visible = function (target) {
 $(window).scroll(function () { 
 	Visible (element); 
 	var y = $(this).scrollTop();
-	console.log(y);
   if (y > 800) {
     element = document.querySelector('.ordeh2');
   } else if(y < 4200){
@@ -77,9 +75,6 @@ $(window).scroll(function () {
 	if(y > 4200){
 		element = document.querySelector('.ordeh3');
 	}
-	console.log(element);
 });
 
 Visible (element); 
-=======
->>>>>>> 89ec07702477cd274ce406826c8950639cd332e9
