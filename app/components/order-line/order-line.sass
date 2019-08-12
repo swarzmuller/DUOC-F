@@ -8,7 +8,9 @@
 	left: 50%
 	transform: translateX(-50%)
 	z-index: 30
-	display: block
+	display: none
+	+r(767)
+		display: none !important
 	.container
 		height: 100%
 	&-content
@@ -16,11 +18,17 @@
 		align-items: center
 		justify-content: space-between
 		height: 100%
+		+r(1023)
+			justify-content: center
 	&-pack
 		width: 40px
+		+r(1023)
+			display: none
 	.forma__price
 		padding-right: 65px
 		position: relative
+		+r(1023)
+			margin-right: 15px
 		&:before
 			content: ''
 			position: absolute
@@ -32,6 +40,9 @@
 	.forma__price-old__name
 		color: #ffffff
 		font-size: 13px
+	.header__timer
+		+r(1023)
+			display: none
 	.forma__price-old__price
 		color: #ffffff
 		opacity: 0.75
@@ -50,4 +61,6 @@
 		margin-right: 14px
 
 .show-line
-	display: none
+	display: block
+.show-line2
+	display: block

@@ -36,9 +36,8 @@ $('.increase-bottom').slick({
 ]
 });
 
-var element = document.querySelector('.increase-top');
-var element2 = document.querySelector('.increase-top');
-
+var element = document.querySelector('.ordeh');
+var element2 = document.querySelector('.ordeh2');
 var Visible = function (target) {
   var targetPosition = {
       top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -56,14 +55,27 @@ var Visible = function (target) {
     targetPosition.top < windowPosition.bottom && 
     targetPosition.right > windowPosition.left && 
     targetPosition.left < windowPosition.right) { 
-		$('.orderLine').addClass('show-line');
-  } else {
+	
 		$('.orderLine').removeClass('show-line');
 		
+  } else {
+		$('.orderLine').addClass('show-line');
   };
 };
-window.addEventListener('scroll', function() {
-  Visible (element);
-});
-Visible (element);
 
+$(window).scroll(function () { 
+	Visible (element); 
+	var y = $(this).scrollTop();
+	console.log(y);
+  if (y > 800) {
+    element = document.querySelector('.ordeh2');
+  } else if(y < 4200){
+    element = document.querySelector('.ordeh');
+	}
+	if(y > 4200){
+		element = document.querySelector('.ordeh3');
+	}
+	console.log(element);
+});
+
+Visible (element); 
