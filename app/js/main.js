@@ -48,6 +48,18 @@
 
 
 
+const haburg = document.querySelector('.hamburger');
+const menu = document.querySelector('.header__menu');
+const close = document.querySelector('.close');
+
+haburg.onclick = function () {
+    menu.classList.add("active-menu");
+};
+
+close.onclick = function () {
+    menu.classList.remove("active-menu");
+};
+
 var element = document.querySelector('.ordeh');
 var Visible = function (target) {
   var targetPosition = {
@@ -87,4 +99,4 @@ $(window).scroll(function () {
 	}
 });
 
-Visible (element); 
+
