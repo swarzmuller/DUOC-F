@@ -8,7 +8,8 @@
   &__logo{
     width: 133px;
     height: 41px;
-    background: url(../img/1-logo.svg) no-repeat;
+    background: url(../img/1-logo.png) no-repeat;
+    background-size: contain;
   }
   &__menu{
     display: flex;
@@ -72,7 +73,9 @@
     }
   }
 }
-
+::-ms-clear {
+  display: none;
+}
 .main{
   background: #FFFFFF;
   padding: 67px 0 150px;
@@ -160,7 +163,6 @@
   }
   &__price{
     display: flex;
-    display: flex;
     align-items: flex-start;
     &-old{
       display: flex;
@@ -169,7 +171,7 @@
       &__name{
         font-size: 13px;
         color: #666666;
-        margin: 0 0 2px;
+        margin: 0 0 4px;
       }
       &__price{
         color: #a2a1a1;
@@ -223,14 +225,9 @@
         .x_currency{
           font-size: 16px;
           position: relative;
-          &:after{
-            content: '*';
-            display: block;
-            font-size: 16px;
-            position: absolute;
-            top: 0;
-            right: -5px;
-          }
+        }
+        .star{
+          font-size: 16px;
         }
       }
     }
@@ -341,7 +338,7 @@
     justify-content: center;
   }
   .forma__price-old{
-    margin: 0 16px 0 0;
+    margin: 0 45px 0 0;
   }
   .form__input-field{
     width: 220px;
@@ -409,17 +406,41 @@
     flex-wrap: wrap;
   }
 }
+.hamburger, .close{
+  display: none;
+}
+.menu-button__line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+}
 @include r(767){
   .header__wrap{
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 10px 0;
+    padding: 15px 0 10px;
+  }
+  .header__timer{
+    margin: 8px 0 0;
   }
   .main__wrap{
     flex-direction: column;
   }
   .main__text{
     width: auto;
+  }
+  .forma__price {
+    width: 345px;
+    justify-content: space-between;
+  }
+  .header__menu-item .link {
+    font-size: 24px;
+    padding: 13px 0 3px;
+    margin: 0 0 0 0px;
   }
   .form{
     flex-wrap: wrap;
@@ -429,6 +450,60 @@
   .form .name,
   .form .phone {
     margin: 7px;
+  }
+  .header__menu{
+    display: none;
+    position: absolute;
+    transition: .2s ease-out;
+    transform: translate3d(100%, 0, 0);
+    background-color: #fff;
+    will-change: transform;
+    overflow: hidden;
+
+  }
+  .header__menu-item svg{
+    display: none;
+  }
+  .active-menu{
+    display: block;
+    position: fixed;
+    background: #e24b3e;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 999;
+    width: 272px;
+    padding: 13px;
+    transition: .2s ease-out;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    &:before{
+      width: 133px;
+      height: 41px;
+      background: url(../img/1-logo.png) no-repeat;
+      background-size: contain;
+      content: '';
+      display: block;
+    }
+  }
+  .header__wrap{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hamburger{
+    display: block;
+    font-size: 41px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .close{
+    font-size: 26px;
+    text-align: right;
+    position: absolute;
+    color: #fff;
+    right: 13px;
+    top: 21px;
+    display: block;
   }
 }
 @include r(639){
@@ -443,8 +518,29 @@
   .form__input-field {
     width: 246px;
   }
+  .forma__price {
+    width: auto;
+  }
   .header__btn {
     width: 253px;
     margin: 7px 0 0 0;
+  }
+  .forma__price-old{
+    margin: 0 16px 0 0 ;
+  }
+  .active-menu{
+    width: 100%;
+    display: block;
+  }
+  .header__wrap {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hamburger {
+    cursor: pointer;
+    font-size: 41px;
+    position: absolute;
+    right: 16px;
+    top: 40px;
   }
 }
