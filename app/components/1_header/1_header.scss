@@ -87,7 +87,7 @@
   &__pack{
     .pack{
       position: absolute;
-      left: -195px;
+      left: -204px;
       top: 51px;
       z-index: 2;
     }
@@ -164,6 +164,7 @@
   &__price{
     display: flex;
     align-items: flex-start;
+    height: 74px;
     &-old{
       display: flex;
       flex-direction: column;
@@ -212,7 +213,7 @@
       &__name{
         font-size: 14px;
         color: #30302f;
-        margin: 0 0 2px;
+        margin: 0 0 5px;
       }
       &__price{
         color: #e24b3e;
@@ -228,6 +229,7 @@
         }
         .star{
           font-size: 16px;
+          margin: 0 0 0 3px;
         }
       }
     }
@@ -299,14 +301,21 @@
   }
 }
 
+.snoska{
+  position: absolute;
+  left: 64px;
+  top: 59px;
+  color: #666;
+}
 
 @include r(1500){
   .main__pack .leaf{
     display: none;
   }
   .main__pack .pack {
-    left: -33px;
-    width: 749px;
+    left: -32px;
+    width: 691px;
+    top: 61px;
   }
   .main {
     background: #fff;
@@ -326,6 +335,7 @@
     width: 551px;
     top: 83px;
   }
+
   .main__pack .ingridient{
     width: 292px;
     left: 182px;
@@ -349,6 +359,9 @@
   }
   .header__btn{
     width: 218px;
+  }
+  .snoska {
+    left: 78px;
   }
 }
 @include r(1023){
@@ -405,7 +418,14 @@
   .forma__wrap{
     flex-wrap: wrap;
   }
+  .snoska {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 56px;
+  }
 }
+
+
 .hamburger, .close{
   display: none;
 }
@@ -418,11 +438,13 @@
   background-color: #000;
   position: relative;
 }
+
+
 @include r(767){
   .header__wrap{
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 15px 0 10px;
+    //padding: 15px 0 10px;
   }
   .header__timer{
     margin: 8px 0 0;
@@ -437,9 +459,12 @@
     width: 345px;
     justify-content: space-between;
   }
+  .header__menu-item{
+    margin: 0;
+  }
   .header__menu-item .link {
     font-size: 24px;
-    padding: 13px 0 3px;
+    padding: 3px 0 3px;
     margin: 0 0 0 0px;
   }
   .form{
@@ -452,20 +477,11 @@
     margin: 7px;
   }
   .header__menu{
-    display: none;
-    position: absolute;
+    //display: none;
     transition: .2s ease-out;
     transform: translate3d(100%, 0, 0);
-    background-color: #fff;
     will-change: transform;
     overflow: hidden;
-
-  }
-  .header__menu-item svg{
-    display: none;
-  }
-  .active-menu{
-    display: block;
     position: fixed;
     background: #e24b3e;
     right: 0;
@@ -474,9 +490,6 @@
     z-index: 999;
     width: 272px;
     padding: 13px;
-    transition: .2s ease-out;
-    overflow: visible;
-    transform: translate3d(0, 0, 0);
     &:before{
       width: 133px;
       height: 41px;
@@ -485,6 +498,14 @@
       content: '';
       display: block;
     }
+  }
+  .header__menu-item svg{
+    display: none;
+  }
+  .active-menu{
+    display: block;
+    transform: translate3d(0, 0, 0);
+
   }
   .header__wrap{
     flex-direction: row;
@@ -504,6 +525,17 @@
     right: 13px;
     top: 21px;
     display: block;
+    cursor: pointer;
+  }
+  .snoska {
+    transform: translateX(0%);
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 11px 0 0;
+  }
+  .forma__price{
+    height: auto;
   }
 }
 @include r(639){
@@ -512,9 +544,9 @@
   }
 }
 @include r(479){
-  .header__menu{
-    display: none;
-  }
+  //.header__menu{
+  //  display: none;
+  //}
   .form__input-field {
     width: 246px;
   }
@@ -525,6 +557,7 @@
     width: 253px;
     margin: 7px 0 0 0;
   }
+
   .forma__price-old{
     margin: 0 16px 0 0 ;
   }
@@ -535,12 +568,13 @@
   .header__wrap {
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px 0 10px;
   }
   .hamburger {
     cursor: pointer;
     font-size: 41px;
     position: absolute;
     right: 16px;
-    top: 40px;
+    top: 15px;
   }
 }
