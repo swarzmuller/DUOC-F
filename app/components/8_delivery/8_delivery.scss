@@ -65,6 +65,13 @@
     }
 }
 
+.delivery__item_form {
+
+    .delivery__circle {
+        cursor: pointer;
+    }
+}
+
 .delivery__circle {
     display: flex;
     justify-content: center;
@@ -74,7 +81,6 @@
     margin-bottom: 27px;
     border-radius: 50%;
     background-color: #f4dacc;
-    cursor: pointer;
 
     @include r(1023) {
         width: 230px;
@@ -278,5 +284,15 @@
     .delivery__payment-desc {
         margin-top: 3px;
         line-height: 13px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .delivery__item-title {
+        line-height: 22px;
+    }
+
+    .delivery__desc {
+        line-height: 18px;
     }
 }
