@@ -61,7 +61,11 @@
     }
 
     @include r(639) {
-        width: 55%;
+        width: 70%;
+    }
+
+    @include r(360) {
+        width: 100%;
     }
 }
 
@@ -147,6 +151,12 @@
     @include r(639) {
         font-size: 16px;
         line-height: 20px;
+    }
+
+    br {
+        @include r(767) {
+            display: none;
+        }
     }
 }
 
@@ -264,10 +274,14 @@
     align-items: center;
 }
 
+.delivery__payment-pic {
+    margin-bottom: 4px;
+}
+
 .delivery__payment-desc {
     text-align: center;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
     color: #666;
 }
 
@@ -296,3 +310,5 @@
 //        line-height: 18px;
 //    }
 //}
+
+
