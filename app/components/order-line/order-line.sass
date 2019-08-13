@@ -3,7 +3,7 @@
 	background: #e24b3e
 	height: 90px
 	position: fixed
-	top: -90px
+	bottom: -90px
 	left: 50%
 	transform: translateX(-50%)
 	z-index: 30
@@ -16,30 +16,34 @@
 	&-content
 		display: flex
 		align-items: center
-		justify-content: space-between
 		height: 100%
 		+r(1023)
 			justify-content: center
+
 	&-pack
 		width: 40px
+		margin-right: 35px
+		+r(1189)
+			margin-right: 20px
 		+r(1023)
 			display: none
 	.forma__price
-		padding-right: 65px
 		position: relative
 		+r(1023)
 			margin-right: 15px
 		&:before
 			content: ''
 			position: absolute
-			top: 0
-			right: 0
-			width: 58px
-			height: 58px
+			top: -4px
+			right: -92px
+			width: 71px
+			height: 71px
 			background: url(../img/discount.png) no-repeat center
+			background-size: contain
 	.forma__price-old__name
 		color: #ffffff
 		font-size: 13px
+		margin-bottom: 0
 	.header__timer
 		+r(1023)
 			display: none
@@ -47,19 +51,37 @@
 		color: #ffffff
 		opacity: 0.75
 		margin-top: 4px
+		
+	.header__timer
+		margin-left: 158px
+		position: relative
+		top: -6px
+		+r(1189)
+			margin-left: 108px
+	.order__btn
+		margin-left: auto
+		+r(1023)
+			margin-left: 120px
 	.forma__price-old__price:after, .forma__price-old__price:before
 		background-color: #fff
 		opacity: 0.75
 	.forma__price-new__name
 		color: #ffffff
 		font-size: 14px
+		margin-bottom: -1px
 	.forma__price-new__price
 		color: #ffffff
 		font-size: 39px
 		margin-top: 5px
 	.forma__price-old
 		margin-right: 14px
-
+	.price-info
+		margin-bottom: -3px
+		margin-top: -16px
 .show-line
-	top: 0
+	bottom: 0
 	opacity: 1
+.price-info
+	text-align: center
+	font-size: 14px
+	color: #ffffff
