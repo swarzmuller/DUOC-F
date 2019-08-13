@@ -566,19 +566,3 @@
         line-height: 18px;
     }
 }
-
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-    .title_action {
-        font-size: 42px;
-    }
-}
-
-@-moz-document url-prefix() {
-    .action-goods__item_stomach {
-
-        .action-goods__desc {
-            line-height: 20px;
-        }
-    }
-}

@@ -61,7 +61,11 @@
     }
 
     @include r(639) {
-        width: 55%;
+        width: 70%;
+    }
+
+    @include r(360) {
+        width: 100%;
     }
 }
 
@@ -147,6 +151,12 @@
     @include r(639) {
         font-size: 16px;
         line-height: 20px;
+    }
+
+    br {
+        @include r(767) {
+            display: none;
+        }
     }
 }
 
@@ -264,35 +274,13 @@
     align-items: center;
 }
 
+.delivery__payment-pic {
+    margin-bottom: 4px;
+}
+
 .delivery__payment-desc {
     text-align: center;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
     color: #666;
-}
-
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-    .delivery__item-title {
-        line-height: 22px;
-    }
-
-    .delivery__desc {
-        line-height: 18px;
-    }
-
-    .delivery__payment-desc {
-        margin-top: 3px;
-        line-height: 13px;
-    }
-}
-
-@-moz-document url-prefix() {
-    .delivery__item-title {
-        line-height: 22px;
-    }
-
-    .delivery__desc {
-        line-height: 18px;
-    }
 }
