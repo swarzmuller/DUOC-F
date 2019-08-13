@@ -332,7 +332,7 @@
     margin: 0;
   }
   .main__pack .pack {
-    left: -39px;
+    left: -52px;
     width: 551px;
     top: 83px;
   }
@@ -542,6 +542,12 @@
 @include r(639){
   .form__input-field {
     width: 207px;
+  }
+  .main__text-head{
+    text-align: center;
+  }
+  .main__text-descr{
+    text-align: center;
   }
 }
 @include r(479){
