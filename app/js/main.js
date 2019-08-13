@@ -41,13 +41,6 @@
 
 
 
-
-
-
-
-
-
-
 const haburg = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__menu');
 const close = document.querySelector('.close');
@@ -58,12 +51,7 @@ haburg.onclick = function () {
 close.onclick = function () {
     menu.classList.remove("active-menu");
 };
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top -29
-    }, 1000);
-});
+
 
 var element = document.querySelector('.ordeh');
 var Visible = function (target) {
@@ -105,3 +93,12 @@ $(window).scroll(function () {
 });
 
 
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+
+    }, 1000);
+    menu.classList.remove("active-menu");
+});

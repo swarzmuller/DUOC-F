@@ -65,10 +65,7 @@
   background: #fff;
 }
 
-
-
-
-@include r(1189){
+@include r(1219){
   .reviews__item{
     padding: 10px;
   }
@@ -81,6 +78,11 @@
   .slick-next {
     right: -6px;
   }
+}
+
+
+@include r(1189){
+
 }
 @include r(1023){
   .slick-dots{

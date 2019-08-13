@@ -164,6 +164,7 @@
   &__price{
     display: flex;
     align-items: flex-start;
+    height: 74px;
     &-old{
       display: flex;
       flex-direction: column;
@@ -212,7 +213,7 @@
       &__name{
         font-size: 14px;
         color: #30302f;
-        margin: 0 0 2px;
+        margin: 0 0 5px;
       }
       &__price{
         color: #e24b3e;
@@ -228,6 +229,7 @@
         }
         .star{
           font-size: 16px;
+          margin: 0 0 0 3px;
         }
       }
     }
@@ -299,14 +301,21 @@
   }
 }
 
+.snoska{
+  position: absolute;
+  left: 64px;
+  top: 59px;
+  color: #666;
+}
 
 @include r(1500){
   .main__pack .leaf{
     display: none;
   }
   .main__pack .pack {
-    left: -33px;
-    width: 749px;
+    left: -32px;
+    width: 691px;
+    top: 61px;
   }
   .main {
     background: #fff;
@@ -326,6 +335,7 @@
     width: 551px;
     top: 83px;
   }
+
   .main__pack .ingridient{
     width: 292px;
     left: 182px;
@@ -349,6 +359,9 @@
   }
   .header__btn{
     width: 218px;
+  }
+  .snoska {
+    left: 78px;
   }
 }
 @include r(1023){
@@ -405,7 +418,14 @@
   .forma__wrap{
     flex-wrap: wrap;
   }
+  .snoska {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 56px;
+  }
 }
+
+
 .hamburger, .close{
   display: none;
 }
@@ -418,6 +438,8 @@
   background-color: #000;
   position: relative;
 }
+
+
 @include r(767){
   .header__wrap{
     flex-wrap: wrap;
@@ -503,6 +525,17 @@
     right: 13px;
     top: 21px;
     display: block;
+    cursor: pointer;
+  }
+  .snoska {
+    transform: translateX(0%);
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 11px 0 0;
+  }
+  .forma__price{
+    height: auto;
   }
 }
 @include r(639){
@@ -542,6 +575,6 @@
     font-size: 41px;
     position: absolute;
     right: 16px;
-    top: 40px;
+    top: 15px;
   }
 }

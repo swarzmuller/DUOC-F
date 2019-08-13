@@ -79,7 +79,7 @@
 @include r(1189) {
   .effect__item{
     width: 489px;
-    margin: 0 0 18px;
+    margin: 18px 0 0;
   }
   .effect__item-time{
     margin: -21px -34px 0 10px;
@@ -89,6 +89,9 @@
   }
   .effect-text {
     font-size: 18px;
+  }
+  .effect__wrap{
+    margin: 30px 0 0;
   }
 }
 
