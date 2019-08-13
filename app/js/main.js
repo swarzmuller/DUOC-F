@@ -1,4 +1,5 @@
 //=include /libs/slick.min.js"
+//=include ../components/2_action/2_action.js
 //=include ../components/7_reviews/7_reviews.js
 //=include ../components/footer/footer.js
 
@@ -24,7 +25,7 @@
 // 			slidesToShow: 2,
 // 			slidesToScroll: 2,
 // 			arrows: true
-			
+
 // 		}
 // 	},
 // 	{
@@ -46,21 +47,21 @@ const menu = document.querySelector('.header__menu');
 const close = document.querySelector('.close');
 
 haburg.onclick = function () {
-    menu.classList.add("active-menu");
+  menu.classList.add("active-menu");
 };
 close.onclick = function () {
-    menu.classList.remove("active-menu");
+  menu.classList.remove("active-menu");
 };
 
 
 var element = document.querySelector('.ordeh');
 var Visible = function (target) {
   var targetPosition = {
-      top: window.pageYOffset + target.getBoundingClientRect().top,
-      left: window.pageXOffset + target.getBoundingClientRect().left,
-      right: window.pageXOffset + target.getBoundingClientRect().right,
-      bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-    },
+    top: window.pageYOffset + target.getBoundingClientRect().top,
+    left: window.pageXOffset + target.getBoundingClientRect().left,
+    right: window.pageXOffset + target.getBoundingClientRect().right,
+    bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+  },
     windowPosition = {
       top: window.pageYOffset,
       left: window.pageXOffset,
@@ -68,37 +69,37 @@ var Visible = function (target) {
       bottom: window.pageYOffset + document.documentElement.clientHeight
     };
   if (targetPosition.bottom > windowPosition.top &&
-    targetPosition.top < windowPosition.bottom && 
-    targetPosition.right > windowPosition.left && 
-    targetPosition.left < windowPosition.right) { 
-	
-		$('.orderLine').removeClass('show-line');
-		
+    targetPosition.top < windowPosition.bottom &&
+    targetPosition.right > windowPosition.left &&
+    targetPosition.left < windowPosition.right) {
+
+    $('.orderLine').removeClass('show-line');
+
   } else {
-		$('.orderLine').addClass('show-line');
+    $('.orderLine').addClass('show-line');
   };
 };
 
-$(window).scroll(function () { 
-	Visible (element); 
-	var y = $(this).scrollTop();
+$(window).scroll(function () {
+  Visible(element);
+  var y = $(this).scrollTop();
   if (y > 800) {
     element = document.querySelector('.ordeh2');
-  } else if(y < 4200){
+  } else if (y < 4200) {
     element = document.querySelector('.ordeh');
-	}
-	if(y > 4200){
-		element = document.querySelector('.ordeh3');
-	}
+  }
+  if (y > 4200) {
+    element = document.querySelector('.ordeh3');
+  }
 });
 
 
 $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
 
-    }, 1000);
-    menu.classList.remove("active-menu");
+  }, 1000);
+  menu.classList.remove("active-menu");
 });
