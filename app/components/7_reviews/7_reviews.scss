@@ -1,5 +1,5 @@
 .reviews{
-  padding: 81px 0;
+  padding: 81px 0 144px;
   &__wrap{
     margin: 62px 0 0;
   }
@@ -83,7 +83,9 @@
 
 
 @include r(1189){
-
+  .reviews {
+    padding: 81px 0 81px;
+  }
 }
 @include r(1023){
   .slick-dots{

@@ -4,9 +4,9 @@
 //=include ../components/footer/footer.js
 
 
-const haburg = document.querySelector('.hamburger');
-const menu = document.querySelector('.header__menu');
-const close = document.querySelector('.close');
+var haburg = document.querySelector('.hamburger');
+var menu = document.querySelector('.header__menu');
+var close = document.querySelector('.close');
 
 haburg.onclick = function () {
   menu.classList.add("active-menu");

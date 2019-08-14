@@ -73,7 +73,7 @@
 
     @include r(639) {
         font-size: 29px;
-        line-height: 36px;
+        line-height: 30px;
     }
 
     @include r(479) {
@@ -507,7 +507,7 @@
     }
 
     @include r(639) {
-        width: 40%;
+        width: 50%;
     }
 
     @include r(405) {
@@ -564,5 +564,12 @@
     @include r(360) {
         font-size: 15px;
         line-height: 18px;
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .title_action {
+        font-size: 42px;
     }
 }
