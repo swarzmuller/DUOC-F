@@ -55,6 +55,22 @@
 	.footer {
 		font-size: 15px;
 	}
+	.footer__wrap{
+		flex-direction: column;
+	}
+	.footer__left{
+		flex-direction: column;
+		order: -1;
+	}
+	.footer__requisites {
+		text-transform: uppercase;
+		text-align: center;
+		//margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.footer__right{
+		order: -1;
+	}
 }
 
 @include r(767) {

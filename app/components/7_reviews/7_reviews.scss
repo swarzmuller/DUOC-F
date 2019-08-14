@@ -86,14 +86,24 @@
   .reviews {
     padding: 81px 0 81px;
   }
+  .reviews__item {
+    margin: 6px;
+  }
+  .slick-dots {
+    bottom: 0;
+    position: static;
+  }
 }
 @include r(1023){
   .slick-dots{
     display: none!important;
   }
   .reviews__item {
-    margin: 10px;
+    margin: 5px;
     //box-shadow: 0 0 5px 4px rgba(1,2,2,.07);
+  }
+  .reviews__wrap {
+    margin: 15px 0 0;
   }
 
 }
