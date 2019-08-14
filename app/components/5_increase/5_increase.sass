@@ -26,6 +26,10 @@
 			font-size: 40px
 			font-weight: 900
 			line-height: 1
+			+r(1189)
+				font-size: 38px
+				text-align: center
+				width: 100%
 			+r(1023)
 				text-align: center
 				font-size: 36px
@@ -64,6 +68,8 @@
 			position: relative
 			+r(1189)
 				padding-left: 43px
+				font-size: 19px
+				line-height: 26px
 			+r(1023)
 				width: 32%
 				padding-left: 40px
@@ -183,6 +189,7 @@
 		.forma__price
 			+r(1189)
 				flex-direction: column
+				height: auto
 			+r(1023)
 				flex-direction: row
 				margin-bottom: 10px
@@ -206,7 +213,7 @@
 			font-weight: 900
 		+r(1189)
 			font-size: 22px
-			margin-top: 20px
+			margin-top: 12px
 		+r(1023)
 			margin-top: 15px
 			font-size: 20px
@@ -236,6 +243,7 @@
 		+r(1023)
 			width: 100%
 			display: flex
+			align-items: center
 		+r(639)
 			flex-direction: column
 			max-width: 400px
@@ -243,6 +251,8 @@
 			margin-left: auto
 		&-top
 			flex-shrink: 0
+			+r(1023)
+				max-width: 260px
 		&:not(:last-child)
 			+r(1023)
 				margin-bottom: 20px
@@ -292,11 +302,15 @@
 			display: flex
 			justify-content: center
 			align-items: center
-			height: 60px
+			min-height: 60px
 			position: relative
 			margin-top: -3px
 			+r(1189)
 				font-size: 20px
+				min-height: 50px
+			+r(1023)
+				text-align: center
+				font-size: 19px
 			+r(767)
 				font-size: 18px
 			+r(639)
@@ -307,7 +321,7 @@
 			color: #444444
 			font-size: 18px
 			font-weight: 400
-			line-height: 28px
+			line-height: 28px	
 			b
 				font-weight: 500
 				color: #000000
@@ -320,8 +334,9 @@
 				+r(767)
 					margin-bottom: 5px
 			+r(1189)
-				line-height: 24px
 				padding: 17px 20px 20px
+				font-size: 17px
+				line-height: 22px
 			+r(767)
 				padding: 15px
 				line-height: normal
@@ -402,7 +417,7 @@
 		padding-right: 47px
 		margin-top: 9px
 		+r(1189)
-			margin-top: 10px
+			margin-top: -11px
 		+r(1023)
 			margin-top: 0
 			padding-right: 0
@@ -418,3 +433,57 @@
 	background-color: #80bc34
 .increase-blue
 	background-color: #29aeda
+
+@media (min-width: 1024px) and (max-width: 1189px)
+	.increase-list
+		flex-direction: column
+		margin-top: 0
+	.increase-pack
+		position: inherit
+		margin: 0 20px
+	.increase-form 
+		width: 280px
+		border-radius: 15px
+		border: 2px solid #e5d9d8
+		padding-top: 15px
+		padding-bottom: 15px
+	.increase-form .forma__wrap
+		align-items: center
+		flex-wrap: wrap
+	.increase-form .forma__price
+		flex-direction: row
+		margin-bottom: 10px
+		justify-content: center
+	.increase-form .forma__price-old 
+		margin-bottom: 0
+		margin-right: 15px
+	.increase-form .form
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		-ms-flex-direction: column
+		flex-direction: column
+	.increase-form .form .name, .increase-form .form .phone
+		margin-bottom: 15px
+	.increase-form .form__input-field
+		height: 60px
+		margin-right: 0
+	.increase-form .order__btn
+		height: 60px
+	.increase .price-info
+		padding-right: 0
+		text-align: center
+		margin-top: 10px
+	.increase-top
+		padding-left: 0
+		padding-top: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+	.increase-list__item
+		&:not(:last-child)
+			margin-bottom: 25px
+
+
+
+

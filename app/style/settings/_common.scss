@@ -58,7 +58,8 @@ br{
     text-align: center;
 
     @include r(1189) {
-        font-size: 42px;
+				font-size: 42px;
+				line-height: normal;
     }
 
     @include r(1023) {
