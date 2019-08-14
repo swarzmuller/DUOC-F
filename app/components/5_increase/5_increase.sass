@@ -1,5 +1,5 @@
 .increase
-	padding: 95px 0 100px
+	padding: 60px 0 100px
 	+r(1189)
 		padding: 60px 0
 	&-top
@@ -26,10 +26,20 @@
 			font-size: 40px
 			font-weight: 900
 			line-height: 1
+			+r(1189)
+				font-size: 38px
+				text-align: center
+				width: 100%
 			+r(1023)
 				text-align: center
 				font-size: 36px
 				width: 100%
+			+r(639)
+				font-size: 29px
+			+r(479)
+				font-size: 26px
+
+
 	&-list
 		margin-top: 30px
 		display: flex
@@ -58,6 +68,8 @@
 			position: relative
 			+r(1189)
 				padding-left: 43px
+				font-size: 19px
+				line-height: 26px
 			+r(1023)
 				width: 32%
 				padding-left: 40px
@@ -115,7 +127,7 @@
 			margin-right: 0
 			margin-bottom: 10px
 	&-form
-		margin-top: 33px
+		margin-top: 28px
 		+r(1189)
 			margin-top: 20px
 		+r(1023)
@@ -124,6 +136,9 @@
 			border: 2px solid #e5d9d8
 			padding-top: 15px
 			padding-bottom: 15px
+		+r(767)
+			padding-left: 20px
+			padding-right: 20px
 		+r(639)
 			margin-top: 0
 		.forma__price-old
@@ -131,6 +146,9 @@
 			+r(1189)
 				margin-right: 20px
 				margin-bottom: 10px
+			+r(1023)
+				margin-bottom: 0
+				margin-right: 15px
 		.form__input-field
 			width: 220px
 			height: 70px
@@ -171,8 +189,11 @@
 		.forma__price
 			+r(1189)
 				flex-direction: column
+				height: auto
 			+r(1023)
 				flex-direction: row
+				margin-bottom: 10px
+				justify-content: center
 	&-title
 		margin-top: 85px
 		+r(1189)
@@ -192,7 +213,7 @@
 			font-weight: 900
 		+r(1189)
 			font-size: 22px
-			margin-top: 20px
+			margin-top: 12px
 		+r(1023)
 			margin-top: 15px
 			font-size: 20px
@@ -222,13 +243,18 @@
 		+r(1023)
 			width: 100%
 			display: flex
+			align-items: center
 		+r(639)
 			flex-direction: column
-			max-width: 400px
+			max-width: 335px
 			margin-right: auto
 			margin-left: auto
 		&-top
 			flex-shrink: 0
+			+r(1023)
+				max-width: 260px
+			+r(639)
+				max-width: 100%
 		&:not(:last-child)
 			+r(1023)
 				margin-bottom: 20px
@@ -278,27 +304,31 @@
 			display: flex
 			justify-content: center
 			align-items: center
-			height: 60px
+			min-height: 60px
 			position: relative
 			margin-top: -3px
 			+r(1189)
 				font-size: 20px
+				min-height: 50px
+			+r(1023)
+				text-align: center
+				font-size: 19px
 			+r(767)
 				font-size: 18px
 			+r(639)
 				font-size: 18px
 				height: 50px
 		&__text
-			padding: 24px 30px 30px
+			padding: 21px 30px 30px
 			color: #444444
 			font-size: 18px
 			font-weight: 400
-			line-height: 28px
+			line-height: 28px	
 			b
 				font-weight: 500
 				color: #000000
 			p:not(:last-child)
-				margin-bottom: 24px
+				margin-bottom: 28px
 				+r(1189)
 					margin-bottom: 15px
 					br
@@ -306,8 +336,9 @@
 				+r(767)
 					margin-bottom: 5px
 			+r(1189)
-				line-height: 24px
 				padding: 17px 20px 20px
+				font-size: 17px
+				line-height: 22px
 			+r(767)
 				padding: 15px
 				line-height: normal
@@ -373,7 +404,7 @@
 		width: 100%
 		height: 70px
 		border-radius: 50px
-		margin-top: 50px
+		margin-top: 70px
 		+r(1189)
 			margin-top: 40px
 		+r(1023)
@@ -388,15 +419,73 @@
 		padding-right: 47px
 		margin-top: 9px
 		+r(1189)
-			margin-top: -17px
+			margin-top: -11px
 		+r(1023)
 			margin-top: 0
 			padding-right: 0
 			text-align: center
 			margin-top: 10px
+	.forma__price-new__price .x_currency
+		line-height: 1
+	.forma__price
+		align-items: center
 .increase-red
 	background-color: #e2523f
 .increase-green
 	background-color: #80bc34
 .increase-blue
 	background-color: #29aeda
+
+@media (min-width: 1024px) and (max-width: 1189px)
+	.increase-list
+		flex-direction: column
+		margin-top: 0
+	.increase-pack
+		position: inherit
+		margin: 0 20px
+	.increase-form 
+		width: 280px
+		border-radius: 15px
+		border: 2px solid #e5d9d8
+		padding-top: 15px
+		padding-bottom: 15px
+	.increase-form .forma__wrap
+		align-items: center
+		flex-wrap: wrap
+	.increase-form .forma__price
+		flex-direction: row
+		margin-bottom: 10px
+		justify-content: center
+	.increase-form .forma__price-old 
+		margin-bottom: 0
+		margin-right: 15px
+	.increase-form .form
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		-ms-flex-direction: column
+		flex-direction: column
+	.increase-form .form .name, .increase-form .form .phone
+		margin-bottom: 15px
+	.increase-form .form__input-field
+		height: 60px
+		margin-right: 0
+	.increase-form .order__btn
+		height: 60px
+	.increase .price-info
+		padding-right: 0
+		text-align: center
+		margin-top: 10px
+	.increase-top
+		padding-left: 0
+		padding-top: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+	.increase-list__item
+		&:not(:last-child)
+			margin-bottom: 25px
+
+
+
+
