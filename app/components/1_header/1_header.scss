@@ -43,7 +43,7 @@
     &-text{
       color: #FFFFFF;
       width: 107px;
-      line-height: 17px;
+      line-height: 16px;
       font-size: 13px;
     }
     &-block{
@@ -107,11 +107,11 @@
   &__text{
       width: 502px;
     &-head{
-      font-size: 73px;
-      line-height: 67px;
+      font-size: 75px;
+      line-height: 65px;
       text-align: left;
       .text-red{
-        font-size: 83px;
+        font-size: 85px;
       }
     }
     &-descr{
@@ -172,7 +172,7 @@
       &__name{
         font-size: 13px;
         color: #666666;
-        margin: 0 0 4px;
+        margin: 0 0 3px;
       }
       &__price{
         color: #a2a1a1;
@@ -180,10 +180,11 @@
         display: flex;
         align-items: baseline;
         position: relative;
+        margin: 2px 0 0;
         &:before{
           content: '';
           position: absolute;
-          width: 89px;
+          width: 85px;
           height: 1px;
           background: #e24b3e;
           display: block;
@@ -277,6 +278,12 @@
       border-radius: 29px;
       padding: 17px 17px 17px 51px;
       width: 272px;
+      font-family: 'Roboto', sans-serif;
+      transition: .3s;
+      &:hover{
+        box-shadow: inset 0 0 7px 1px #c3c3c3;
+      }
+
     }
   }
 }
@@ -332,15 +339,29 @@
     margin: 0;
   }
   .main__pack .pack {
-    left: -39px;
+    left: -29px;
     width: 551px;
     top: 83px;
   }
-
+  .main__text-head {
+    font-size: 66px;
+    line-height: 0.9;
+  }
+  .main__text-descr {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+  .main__text-head .text-red{
+    font-size: 75px;
+  }
+  .main__text {
+    width: auto;
+    max-width: 470px;
+  }
   .main__pack .ingridient{
     width: 292px;
     left: 182px;
-    top: 24px;
+    top: 1px;
   }
   .main__text-descr:before {
     margin: 19px 0 7px;
@@ -400,6 +421,7 @@
   .main__pack .pack{
     position: static;
     width: 650px;
+    margin: 0 -11px 0;
   }
   .main__text-head {
     font-size: 40px;
@@ -409,12 +431,13 @@
     font-size: 40px;
   }
   .main__text-descr:before {
-    margin: 7px 0 7px;
+    margin: 7px 0 10px;
+    height: 2px;
   }
   .main__text-descr {
-    font-size: 21px;
+    font-size: 18px;
     color: #666;
-    line-height: 24px;
+    line-height: 22px;
   }
   .forma__wrap{
     flex-wrap: wrap;
@@ -422,7 +445,10 @@
   .snoska {
     left: 50%;
     transform: translateX(-50%);
-    top: 56px;
+    top: 60px;
+  }
+  .form{
+    margin: 5px 0 0;
   }
 }
 
@@ -446,6 +472,9 @@
     flex-wrap: wrap;
     flex-direction: column;
     //padding: 15px 0 10px;
+  }
+  .form {
+    margin: 0;
   }
   .header__timer{
     margin: 8px 0 0;
@@ -538,10 +567,19 @@
   .forma__price{
     height: auto;
   }
+  .main__pack .pack{
+    margin: 0;
+  }
 }
 @include r(639){
   .form__input-field {
     width: 207px;
+  }
+  .main__text-head{
+    text-align: center;
+  }
+  .main__text-descr{
+    text-align: center;
   }
 }
 @include r(479){
@@ -578,4 +616,13 @@
     right: 16px;
     top: 15px;
   }
+}
+
+.fheader{
+  border-top: 1px solid #e5d9d8;
+  padding: 100px 0 156px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #666666;
 }

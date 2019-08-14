@@ -1,15 +1,16 @@
 .reviews{
-  padding: 81px 0;
+  padding: 81px 0 144px;
   &__wrap{
     margin: 62px 0 0;
   }
   &__item{
-    margin: 22px;
-    box-shadow: 0 0 20px 4px rgba(1, 2, 2, 0.07);
-    border-radius: 7px;
-    padding: 8px;
+    margin: 18px;
+    //box-shadow: 0 0 20px 4px rgba(1, 2, 2, 0.07);
+    //border-radius: 7px;
+    //padding: 8px;
     img{
       margin: 0 auto;
+      border-radius: 7px;
     }
   }
 }
@@ -44,7 +45,7 @@
 }
 
 .slick-next {
-  right: -18px;
+  right: -14px;
 }
 .slick-prev {
   left: -18px;
@@ -67,7 +68,7 @@
 
 @include r(1219){
   .reviews__item{
-    padding: 10px;
+    //padding: 10px;
   }
   .reviews__wrap {
     margin: 26px 0 0;
@@ -82,15 +83,27 @@
 
 
 @include r(1189){
-
+  .reviews {
+    padding: 81px 0 81px;
+  }
+  .reviews__item {
+    margin: 6px;
+  }
+  .slick-dots {
+    bottom: 0;
+    position: static;
+  }
 }
 @include r(1023){
   .slick-dots{
     display: none!important;
   }
   .reviews__item {
-    margin: 10px;
-    box-shadow: 0 0 5px 4px rgba(1,2,2,.07);
+    margin: 5px;
+    //box-shadow: 0 0 5px 4px rgba(1,2,2,.07);
+  }
+  .reviews__wrap {
+    margin: 15px 0 0;
   }
 
 }
