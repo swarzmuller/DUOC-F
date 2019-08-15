@@ -30,17 +30,23 @@
 .action__wrap {
     width: 100%;
     max-width: 565px;
-
+		@include r(1189) {
+	
+			margin-left: 50px;
+	}
     @include r(1023) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        max-width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+				
     }
 
     @include r(767) {
-        justify-content: center;
+				justify-content: space-around;
+				align-items: center;
     }
 }
 
@@ -68,12 +74,14 @@
         margin-bottom: 20px;
         padding-bottom: 15px;
         font-size: 32px;
-        line-height: 42px;
+				line-height: 42px;
+			
     }
 
     @include r(639) {
         font-size: 29px;
-        line-height: 30px;
+				line-height: 30px;
+				order: 1;
     }
 
     @include r(479) {
@@ -98,15 +106,25 @@
     right: 199px;
 
     @include r(1189) {
-        right: 130px;
+        right: 80px;
     }
 
     @include r(1023) {
         position: relative;
         top: auto;
-        right: auto;
+        right: 20px;
         order: 3;
-    }
+		}
+		@include r(767) {
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-right: 0px;
+			order: 3;
+	}
+	@include r(639) {
+		order: 2;
+}
 }
 
 .action__info {
@@ -155,7 +173,11 @@
         top: 150px;
         left: 52px;
     }
-
+		@include r(767) {
+			top: 193px;
+			right: 33px;
+			left: auto;
+	}
     &::before {
         top: 63%;
         right: -125px;
@@ -166,9 +188,12 @@
         @include r(1189) {
             left: -125px;
         }
-
-        @include r(767) {
-            left: 50%;
+				@include r(767) {
+					left: -114px;
+					top: 58px;
+			}
+        @include r(639) {
+					left: 50%;
         }
 
         &::before {
@@ -176,7 +201,7 @@
                 left: 92%;
             }
 
-            @include r(767) {
+            @include r(639) {
                 left: 50%;
             }
         }
@@ -200,7 +225,10 @@
         top: 70px;
         right: 48px;
     }
-
+		@include r(767) {
+			top: 58px;
+			right: 33px;
+	}
     &::before {
         top: 60%;
         left: -141px;
@@ -210,8 +238,11 @@
         @include r(1480) {
             left: -125px;
         }
-
-        @include r(767) {
+				@include r(767) {
+					left: -114px;
+					top: 58px;
+			}
+        @include r(639) {
             left: 50%;
         }
 
@@ -219,8 +250,8 @@
             @include r(1480) {
                 left: 92%;
             }
-
-            @include r(767) {
+					
+            @include r(639) {
                 left: 50%;
             }
         }
@@ -234,7 +265,7 @@
     @include r(1200) {
         right: -183px;
     }
-
+	
     @include r(1189) {
         bottom: 250px;
         right: 78px;
@@ -244,7 +275,10 @@
         bottom: 160px;
         right: 49px;
     }
-
+		@include r(767) {
+			top: 125px;
+			right: 33px;
+	}
     &::before {
         top: -71%;
         left: -135px;
@@ -255,8 +289,11 @@
         @include r(1480) {
             left: -125px;
         }
-
-        @include r(767) {
+				@include r(767) {
+					left: -114px;
+					top: 58px;
+			}
+        @include r(639) {
             left: 50%;
         }
 
@@ -265,7 +302,7 @@
                 left: 92%;
             }
 
-            @include r(768) {
+            @include r(639) {
                 left: 50%;
             }
         }
@@ -277,7 +314,10 @@
 
     @include r(1023) {
         width: 140px;
-    }
+		}
+		@include r(767) {
+			width: 106px;
+	}
 }
 
 .action__capsule-img {
@@ -344,15 +384,22 @@
 
     @include r(1023) {
         max-width: 530px;
-        order: 2;
+				order: 2;
+				margin-left: 20px;
+				margin-top: 30px;
     }
 
     @include r(767) {
-        margin-bottom: 20px;
+				margin-left: 0;
+				margin-top: 0;
+				max-width: 440px;	
+				padding-left: 10px;
+				padding-right: 10px;
     }
 
     @include r(639) {
-        padding: 15px;
+				padding: 15px;
+				margin-top: 15px;
     }
 
     &:hover {
@@ -367,10 +414,11 @@
     font-weight: 900;
     color: #000;
 
-    @include r(639) {
+    @include r(767) {
         margin-bottom: 15px;
         font-size: 22px;
-        line-height: 24px;
+				line-height: 24px;
+				text-align: center;
     }
 }
 
@@ -385,7 +433,7 @@
     line-height: 28px;
     color: #000;
 
-    @include r(639) {
+    @include r(767) {
         font-size: 17px;
         line-height: 22px;
     }
@@ -393,8 +441,8 @@
     &:not(:last-child) {
         margin-bottom: 20px;
 
-        @include r(639) {
-            margin-bottom: 15px;
+        @include r(767) {
+            margin-bottom: 10px;
         }
     }
 }
@@ -411,10 +459,11 @@
     border-radius: 50%;
     box-shadow: 2px 2px 0 0 #7fa153;
 
-    @include r(639) {
+    @include r(767) {
         width: 35px;
         height: 35px;
-        box-shadow: 1px 1px 0 0 #7fa153;
+				box-shadow: 1px 1px 0 0 #7fa153;
+				margin-right: 12px;
     }
 
     &::before {
@@ -510,8 +559,16 @@
         width: 50%;
     }
 
-    @include r(405) {
-        width: 60%;
+    @include r(479) {
+				max-width: 260px;
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+				flex-direction: row;
+				padding: 0;
+				&:not(:first-child){
+					margin-top: 10px !important;
+				}
     }
 }
 
@@ -529,14 +586,23 @@
         width: 90px;
         height: 90px;
         margin-bottom: 8px;
-    }
+		}
+		@include r(479) {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 0px;
+			flex-shrink: 0;
+	}
 }
 
 .action-goods__pic {
 
     @include r(1023) {
         width: 55px;
-    }
+		}
+		@include r(479) {
+			width: 37px;
+	}
 }
 
 .action-goods__img {
@@ -555,16 +621,15 @@
         font-size: 18px;
         line-height: 24px;
     }
-
-    @include r(430) {
+	
+    @include r(479) {
         font-size: 16px;
-        line-height: 20px;
+				line-height: 20px;
+				text-align: left;
+				padding-left: 10px;
     }
 
-    @include r(360) {
-        font-size: 15px;
-        line-height: 18px;
-    }
+
 }
 
 @media screen and (-ms-high-contrast: active),
