@@ -208,8 +208,8 @@
     }
 
     @include r(1023) {
-        top: 145px;
-        left: 51px;
+        top: 123px;
+        left: 41px;
     }
 
     @include r(767) {
@@ -264,8 +264,8 @@
     }
 
     @include r(1023) {
-        top: 60px;
-        right: 48px;
+        top: 55px;
+        right: 39px;
     }
 
     @include r(767) {
@@ -318,8 +318,8 @@
     }
 
     @include r(1023) {
-        bottom: 150px;
-        right: 49px;
+        bottom: 140px;
+        right: 39px;
     }
 
     @include r(767) {
@@ -363,7 +363,7 @@
     width: 202px;
 
     @include r(1023) {
-        width: 140px;
+        width: 120px;
     }
 
     @include r(767) {
@@ -608,7 +608,7 @@
 
     &:nth-child(n+2) {
         @include r(639) {
-            margin-top: 20px;
+            margin-top: 10px;
         }
     }
 
@@ -616,11 +616,19 @@
         @include r(767) {
             margin-top: 20px;
         }
+
+        @include r(639) {
+            margin-top: 10px;
+        }
     }
 
     &:nth-child(n+4) {
         @include r(1023) {
             margin-top: 20px;
+        }
+
+        @include r(639) {
+            margin-top: 10px;
         }
     }
 
@@ -724,7 +732,7 @@
         line-height: 24px;
     }
 
-    @include r(767) {
+    @include r(1023) {
         text-align: left;
     }
 
